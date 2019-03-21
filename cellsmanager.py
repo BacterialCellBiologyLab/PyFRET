@@ -677,9 +677,9 @@ class Cell(object):
 
         phase_img = image_manager.phase_image[x0:x1+1, y0:y1+1]
         phase_img = gray2rgb(img_as_float(phase_img))
-        donor_img = rescale_intensity(image_manager.donor_image)[x0:x1+1, y0:y1+1]
+        donor_img = rescale_intensity(image_manager.donor_image[x0:x1+1, y0:y1+1])
         donor_img = gray2rgb(img_as_float(donor_img))
-        acceptor_img = rescale_intensity(image_manager.acceptor_image)[x0:x1+1, y0:y1+1]
+        acceptor_img = rescale_intensity(image_manager.acceptor_image[x0:x1+1, y0:y1+1])
         acceptor_img = gray2rgb(img_as_float(acceptor_img))
 
         cell_masks = np.concatenate((self.cell_mask, self.cell_mask, self.cell_mask), axis=1)

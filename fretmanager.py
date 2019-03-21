@@ -1,5 +1,5 @@
 import numpy as np
-import tkinter as tk
+import Tkinter as tk
 from matplotlib import cm
 from skimage.util import img_as_float
 from skimage.color import gray2rgb
